@@ -1,0 +1,12 @@
+t = -5:0.1:5;
+x1 = zeros(size(t));
+x2 = zeros(size(t));
+x1(t >= -0.5) = 1;
+x2(t >= 0.5) = 1;
+p = x1 - x2;
+figure(5);
+plot(t, p, 'LineWidth', 2);
+title('Fonction porte');
+xlabel('Temps (s)');
+ylabel('Amplitude');
+grid on;
